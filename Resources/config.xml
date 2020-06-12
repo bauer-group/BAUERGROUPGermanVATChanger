@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.3/engine/Shopware/Components/Plugin/schema/config.xsd">
+	<elements>
+		<element type="boolean" required="true">
+			<name>KeepGrossPrice</name>
+			<label lang="de">Bruttopreis behalten</label>
+			<label lang="en">Keep gross price</label>
+			<value>true</value>
+			<description lang="de">Die Bruttopreise im Shop sollen erhalten bleiben. Es wird durch das Plugin dann eine entsprechende Umrechnung erfolgen. Da die Preise intern im Shop immer als Nettopreise gespeichert werden.</description>
+			<description lang="en">The gross prices in the shop should be retained. The plugin will then convert the data accordingly. Since the prices are always saved internally in the shop as net prices.</description>
+		</element>	
+		<element type="datetime" required="true">
+			<name>DateVATLowering</name>
+			<label lang="de">Zeitpunkt für USt. Absenkung</label>
+			<label lang="en">Date for lowering VAT</label>
+			<value>2020-07-01 00:00:00</value>
+			<description lang="de">Zeitpunkt an dem die USt. automatisch gesenkt wird.</description>
+			<description lang="en">Time at which the VAT is automatically reduced.</description>
+		</element>
+		<element type="datetime" required="true">
+			<name>DateVATIncrease</name>
+			<label lang="de">Zeitpunkt für USt. Erhöhung</label>
+			<label lang="en">Date for increasing VAT</label>
+			<value>2021-01-01 00:00:00</value>
+			<description lang="de">Zeitpunkt an dem die USt. automatisch erhöht wird.</description>
+			<description lang="en">Time at which the VAT is automatically increased.</description>
+		</element>
+	</elements>
+</config>

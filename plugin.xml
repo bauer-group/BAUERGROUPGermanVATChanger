@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.4/engine/Shopware/Components/Plugin/schema/plugin.xsd">
+
+    <label lang="de">BAUER GROUP - USt. Anpassung im Rahmen des Corona / COVID-19 Konjunkturprogramms</label>
+    <label lang="en">BAUER GROUP - VAT adjustment as part of the Corona / COVID-19 economic stimulus program</label>
+
+    <version>0.0.2</version>
+    <copyright>Copyright © 2020 BAUER GROUP - http://www.bauer-group.com/</copyright>
+    <license>proprietary</license>
+    <link>http://go.bauer-group.com/ecommerce</link>
+	<support>http://go.bauer-group.com/support</support>
+    <description>Das Plugin passt im Rahmen der Senkung der MwSt. / USt. automatisch am Stichtag '01.07.2020 00:00' gesenkt (von 19% auf 16% und von 7% auf 5%). Ebenso wird der Steuersatz wieder am Stichtag '01.01.2021 00:00' automatisch erhöht. Das Plugin benötigt zwingend aktivierte und funktionierende Cronjobs im Shop für die ordnungsgemäße Funktion. Das Plugin pflegt den Steuersatz für die Artikel und legt die neuen Steuersätze an, sofern diese nicht existieren. Es werden den Artikeln die neuen Steuersätze zugewiesen, anhand ihrer bisherigen Umsatzsteuersätze (19 zu 16% und 7 zu 5%). Die Steuersätze für sonstige Leistungen (Gutscheine, Rabatte) werden von 19 auf 16% geändert. Das Plugin pflegt die Steuersätze für Versandkosten nicht (das ist relevant, wenn die Auto-Ermittlung bei den Versandkosten nicht aktiviert wurde). Auch pflegt es die Steuersätze für Gutscheine nicht (das ist relevant, wenn die Auto-Ermittlung der Steuer bei Gutscheinen nicht genutzt wird). Es wurde bisher nur gegen die Shopware Standardumgebung getestet. Aktuell werden keine Subshops für die automatische Umstellung der USt. sonstiger Leistungen (Gutscheine, Rabatte) unterstützt. Textbausteine, in denen evtl. Steuersätze eingepflegt wurden, sind ebenfalls nicht Bestandteil der automatischen Umstellung.</description>
+    <author>BAUER GROUP</author>
+	
+    <compatibility minVersion="5.2.15"/>
+
+    <changelog version="0.0.1">
+        <changes lang="de">Erste interne Version</changes>
+        <changes lang="en">First internal Version</changes>
+    </changelog>
+    <changelog version="0.0.2">
+        <changes lang="de">Erste freigebene Version</changes>
+        <changes lang="en">First released Version</changes>
+    </changelog>
+</plugin>
