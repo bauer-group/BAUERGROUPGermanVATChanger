@@ -37,7 +37,11 @@ class BAUERGROUPGermanVATChanger extends Plugin
  
 	public function uninstall(UninstallContext $context)
 	{
-		$context->scheduleClearCache($this->getCacheArray());
+		if ($context->getPlugin()->getActive()) 
+		{
+			$context->scheduleClearCache($this->getCacheArray());
+		}
+
 		parent::uninstall($context);
 	}
  

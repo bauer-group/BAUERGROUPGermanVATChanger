@@ -5,7 +5,7 @@
     <label lang="de">BAUER GROUP - USt. Anpassung im Rahmen des Corona / COVID-19 Konjunkturprogramms</label>
     <label lang="en">BAUER GROUP - VAT adjustment as part of the Corona / COVID-19 economic stimulus program</label>
 
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <copyright>Copyright © 2020 BAUER GROUP - http://www.bauer-group.com/</copyright>
     <license>proprietary</license>
     <link>http://go.bauer-group.com/ecommerce</link>
@@ -23,4 +23,8 @@
         <changes lang="de">Erste freigebene Version</changes>
         <changes lang="en">First released Version</changes>
     </changelog>
+    <changelog version="0.0.3">
+        <changes lang="de">Anpassung an die Vorgaben von Shopware</changes>
+        <changes lang="en">Adaptation to the specifications of Shopware</changes>
+    </changelog>	
 </plugin>
