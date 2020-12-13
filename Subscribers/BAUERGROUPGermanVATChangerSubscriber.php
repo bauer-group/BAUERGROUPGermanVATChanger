@@ -82,8 +82,8 @@ class BAUERGROUPGermanVATChangerSubscriber implements SubscriberInterface
 						   ";
 	   }
 	  
-	  //Apply by SQL command
-	  Shopware()->Db()->exec($sqlVATRates);
+	   //Apply by SQL command
+	   Shopware()->Db()->exec($sqlVATRates);
    }
    
    private function getVATIDs()
@@ -153,6 +153,9 @@ class BAUERGROUPGermanVATChangerSubscriber implements SubscriberInterface
 				$this->updateProductPrices($taxID5, 1.05, 1.07);
 			}
 		}
+		
+		//Pseudoprices
+		//UPDATE `s_articles_prices`, `s_articles` SET `s_articles_prices`.`pseudoprice` = `s_articles_prices`.`pseudoprice` / 1.16 * 1.19 WHERE (`s_articles`.id = `s_articles_prices`.`articleID` AND `s_articles_prices`.`pseudoprice` > 0 AND `s_articles`.`taxID` = 5);
 		
 		//Products VAT update
 		if ($hasLowVATRate)
