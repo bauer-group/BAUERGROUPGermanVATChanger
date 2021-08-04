@@ -23,7 +23,7 @@ class BAUERGROUPGermanVATChangerSubscriber implements SubscriberInterface
 
    public function onCronjobExecute(\Shopware_Components_Cron_CronJob $job)
    {
-		//Shopware()->Pluginlogger()->info('BAUERGROUPGermanVATChanger: START OF CRON JOB');
+		//Shopware()->Container()->get('pluginlogger')->info('BAUERGROUPGermanVATChanger: START OF CRON JOB');
 
 		//Configuration
 		$keepGrossPrice = $this->config["KeepGrossPrice"];
@@ -42,7 +42,7 @@ class BAUERGROUPGermanVATChangerSubscriber implements SubscriberInterface
 		//Change Items
 		$this->changeItems($lowVATTimeframe, $keepGrossPrice);
 		
-		//Shopware()->Pluginlogger()->info('BAUERGROUPGermanVATChanger: END OF CRON JOB');
+		//Shopware()->Container()->get('pluginlogger')->info('BAUERGROUPGermanVATChanger: END OF CRON JOB');
    }
 
    private function createVATRates($hasLowVATRate)
